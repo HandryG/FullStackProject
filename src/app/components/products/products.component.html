@@ -1,0 +1,20 @@
+<div class="container my-5">
+    <h1 class="mb-3"></h1>
+    <table class="table" *ngIf="products && products.length > 0">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{product.code}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.stock}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!products || products.length == 0">No Products Found</p>
+</div>
