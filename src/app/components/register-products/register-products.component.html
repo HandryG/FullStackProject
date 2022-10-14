@@ -1,3 +1,20 @@
-<form action="">
+<div class="modal-header">
+    <h4 class="modal-title"Registro></h4>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+    <form #registroProducto="ngForm" (ngSubmit)="submitProduct(registroProducto)" action="">
     
-</form>
+        <div class="mb-3">
+            <label for="product" class="form-label">Nombre Producto</label>
+            <input id="product"  class="form-control" name="product" type="name" ngModel required>
+        </div>
+        <div class="mb-3">
+            <label for="code" class="form-label">Codigo</label>
+            <input id="code"  class="form-control" name="code" type="name" aria-describedby="codeHelp" ngModel required>
+            <div id="code" class="form-text">Formato: AB1-234</div>
+        </div>
+        <div class="mb-3"></div>
+        <button type="submit" class="btn btn-primary">Registrar</button>
+    </form>
+</div>

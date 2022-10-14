@@ -10,14 +10,22 @@ export class ProductsComponent implements OnInit {
 
   products : Product[] = [{
     name:'Jabon',
-    code:'ABCD1234',
+    code:'AB0123',
     stock:0
+  },{
+    name:'Test',
+    code:'TM234',
+    stock: 4
   }];
 
   constructor() { }
 
   ngOnInit(): void {
     
+  }
+
+  open(){
+
   }
 
 }
