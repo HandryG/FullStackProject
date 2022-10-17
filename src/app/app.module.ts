@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ProductsComponent } from './components/products/products.component';
 import { RegisterProductsComponent } from './components/register-products/register-products.component';
 import { ProductAuditComponent } from './components/product-audit/product-audit.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ProductAuditComponent } from './components/product-audit/product-audit.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

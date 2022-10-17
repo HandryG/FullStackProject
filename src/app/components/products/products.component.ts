@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Product } from 'src/app/models/product.model';
+import { RegisterProductsComponent } from '../register-products/register-products.component';
 
 @Component({
   selector: 'app-products',
@@ -18,14 +20,14 @@ export class ProductsComponent implements OnInit {
     stock: 4
   }];
 
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
     
   }
 
   open(){
-
+    const modalRef = this.modalService.open(RegisterProductsComponent);
   }
 
 }
